@@ -11,7 +11,7 @@ const Benefits = () => {
       <div className="container relative z-2">
         <Heading
           className="md:max-w-md lg:max-w-2xl"
-          title="Providing high quality services at Pixel Pure"
+          title="Providing high quality services at Pixel Pure."
         />
 
         <div className="flex flex-wrap gap-10 mb-10">
