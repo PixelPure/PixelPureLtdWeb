@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import ButtonGradient from './assets/svg/ButtonGradient';
 import Benefits from './components/Benefits';
 import Collaboration from './components/Collaboration';
@@ -12,6 +12,17 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 
 const App = () => {
+  const location = useLocation();
+
+  React.useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   return (
     <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
       <Header />

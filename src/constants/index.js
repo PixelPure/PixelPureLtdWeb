@@ -51,12 +51,12 @@ export const navigation = [
   {
     id: "0",
     title: "Services",
-    url: "#services",
+    url: "/#services",
   },
   {
     id: "1",
     title: "Pricing",
-    url: "#pricing",
+    url: "/#pricing",
   },
   {
     id: "2",
@@ -66,7 +66,7 @@ export const navigation = [
   {
     id: "3",
     title: "Get In Touch",
-    url: "#login",
+    url: "/contact",
     onlyMobile: true,
   },
 ];
