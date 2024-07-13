@@ -1,7 +1,7 @@
 import { curve, heroBackground, robot } from "../assets";
 import futuredesign from "../assets/mandesigning1.png"
 import futuredesign2 from "../assets/mandesigning2.png"
-
+// import heroBackground from "../assets/hero/hero-background.png";
 
 import Button from "./Button";
 import Section from "./Section";
@@ -43,7 +43,7 @@ const Hero = () => {
           We specialize in transforming your vision into reality with our cutting-edge website design and development services. Whether you're a startup looking to make a mark or an established business aiming for a digital overhaul, Pixel Pure is your go-to partner.
           </p>
           <Button href="/pricing" white>
-            Get started
+            Get In Touch
           </Button>
         </div>
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
