@@ -36,11 +36,15 @@ import {
   yourlogo,
 } from "../assets";
 
+import portashop from "../assets/portashop.png"
+import liquidity from "../assets/liquidity.png"
+import oneclick from "../assets/oneclickhandling.jpg"
+
 export const navigation = [
   {
     id: "0",
-    title: "Features",
-    url: "#features",
+    title: "Services",
+    url: "#services",
   },
   {
     id: "1",
@@ -65,7 +69,7 @@ export const navigation = [
   },
   {
     id: "5",
-    title: "Sign in",
+    title: "Get In Touch",
     url: "#login",
     onlyMobile: true,
   },
@@ -75,7 +79,7 @@ export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 export const notificationImages = [notification4, notification3, notification2];
 
-export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
+export const companyLogos = [portashop, liquidity, oneclick];
 
 export const brainwaveServices = [
   "Photo generating",
@@ -128,12 +132,12 @@ export const roadmap = [
 ];
 
 export const collabText =
-  "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.";
+  "All members within the Pixel Pure team carry over 5 years of curated experience in a wide variety of efficient and effective technologies.";
 
 export const collabContent = [
   {
     id: "0",
-    title: "Seamless Integration",
+    title: "Heavily Experienced Developers",
     text: collabText,
   },
   {
