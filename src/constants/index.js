@@ -223,9 +223,9 @@ export const pricing = [
     description: "Tell us your idea, our designers will bring it to life by creating the perfect image for your brand",
     price: "150",
     features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
+      "Custom logos tailored to your brand identity",
+      "Unlimited revisions until you’re satisfied",
+      "High-resolution files suitable for web and print",
     ],
   },
   {
@@ -234,9 +234,9 @@ export const pricing = [
     description: "Complete Website Design and Deployment, publishing your company to a digital space",
     price: "500",
     features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
+      "Responsive design for seamless experience on all devices",
+      "SEO-optimized structure to boost your search engine rankings",
+      "Integration with social media and analytics tools",
     ],
   },
   {
@@ -245,9 +245,9 @@ export const pricing = [
     description: "Includes UI/UX design, App functionality development, and deployment on both App Store + Play Store",
     price: "5000",
     features: [
-      "An advanced AI chatbot that can understand complex queries",
-      "An analytics dashboard to track your conversations",
-      "Priority support to solve issues quickly",
+      "Comprehensive UI/UX design for intuitive user experience",
+      "Full functionality development for both iOS and Android",
+      "Post-launch support and maintenance services",
     ],
   },
   
@@ -300,34 +300,23 @@ export const benefits = [
 ];
 
 export const socials = [
-  {
-    id: "0",
-    title: "Discord",
-    iconUrl: discordBlack,
-    url: "#",
-  },
-  {
-    id: "1",
-    title: "Twitter",
-    iconUrl: twitter,
-    url: "#",
-  },
-  {
-    id: "2",
-    title: "Instagram",
-    iconUrl: instagram,
-    url: "#",
-  },
-  {
-    id: "3",
-    title: "Telegram",
-    iconUrl: telegram,
-    url: "#",
-  },
-  {
-    id: "4",
-    title: "Facebook",
-    iconUrl: facebook,
-    url: "#",
-  },
-];
+    {
+      id: "1",
+      title: "Twitter",
+      iconUrl: twitter,
+      url: "https://www.instagram.com/pixelpureltd/",
+    },
+    {
+      id: "2",
+      title: "Instagram",
+      iconUrl: instagram,
+      url: "https://www.instagram.com/pixelpureltd/",
+    },
+    {
+      id: "4",
+      title: "Facebook",
+      iconUrl: facebook,
+      url: "https://www.instagram.com/pixelpureltd/",
+    },
+  ];
+  
