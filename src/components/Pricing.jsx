@@ -28,8 +28,8 @@ const Pricing = () => {
         </div>
 
         <Heading
-          tag="Get started with Pixel Pure"
-          title="Pay once, use forever"
+          text="Our services range from and upwards of:"
+          title="Launch your business with us."
         />
 
         <div className="relative">

@@ -39,6 +39,13 @@ import {
 import portashop from "../assets/portashop.png"
 import liquidity from "../assets/liquidity.png"
 import oneclick from "../assets/oneclickhandling.jpg"
+import pixelpure from "../assets/pixelpureicon.png"
+import react from "../assets/technologies/react.png"
+import firebase from "../assets/technologies/firebase.png"
+import javascript from "../assets/technologies/javascript.png"
+import threejs from "../assets/technologies/threejs.png"
+import typescript from "../assets/technologies/typescript.png"
+import nodejs from "../assets/technologies/nodejs.png"
 
 export const navigation = [
   {
@@ -53,22 +60,11 @@ export const navigation = [
   },
   {
     id: "2",
-    title: "How to use",
+    title: "Our Designers",
     url: "#how-to-use",
   },
   {
     id: "3",
-    title: "Roadmap",
-    url: "#roadmap",
-  },
-  {
-    id: "4",
-    title: "New account",
-    url: "#signup",
-    onlyMobile: true,
-  },
-  {
-    id: "5",
     title: "Get In Touch",
     url: "#login",
     onlyMobile: true,
@@ -134,6 +130,15 @@ export const roadmap = [
 export const collabText =
   "All members within the Pixel Pure team carry over 5 years of curated experience in a wide variety of efficient and effective technologies.";
 
+  export const collabText2 =
+  "We understand that each business is unique. Our solutions are customized to meet your specific needs, ensuring your digital presence aligns perfectly with your brand and goals.";  
+
+  export const collabText3 =
+  "From the initial consultation to the final launch and beyond, we provide comprehensive support at every stage. Our dedicated team is always available to assist with any updates, maintenance, or new requirements.";  
+
+  export const collabText4 =
+  "We rely on well trusted, robust technologies to refine our production, consisting of well known and effective methods of website and app development";  
+
 export const collabContent = [
   {
     id: "0",
@@ -142,11 +147,13 @@ export const collabContent = [
   },
   {
     id: "1",
-    title: "Smart Automation",
+    title: "Tailored Solutions",
+    text: collabText2
   },
   {
     id: "2",
-    title: "Top-notch Security",
+    title: "End-to-End Support",
+    text: collabText3
   },
 ];
 
@@ -156,28 +163,28 @@ export const collabApps = [
     title: "Figma",
     icon: figma,
     width: 26,
-    height: 36,
+    height: 26,
   },
   {
     id: "1",
-    title: "Notion",
-    icon: notion,
+    title: "React",
+    icon: react,
     width: 34,
     height: 36,
   },
   {
     id: "2",
-    title: "Discord",
-    icon: discord,
-    width: 36,
+    title: "Firebase",
+    icon: firebase,
+    width: 34,
     height: 28,
   },
   {
     id: "3",
-    title: "Slack",
-    icon: slack,
-    width: 34,
-    height: 35,
+    title: "Threejs",
+    icon: threejs,
+    width: 32,
+    height: 32,
   },
   {
     id: "4",
@@ -188,33 +195,33 @@ export const collabApps = [
   },
   {
     id: "5",
-    title: "Protopie",
-    icon: protopie,
+    title: "JavaScript",
+    icon: javascript,
+    width: 28,
+    height: 28,
+  },
+  {
+    id: "6",
+    title: "NodeJs",
+    icon: nodejs,
     width: 34,
     height: 34,
   },
   {
-    id: "6",
-    title: "Framer",
-    icon: framer,
-    width: 26,
-    height: 34,
-  },
-  {
     id: "7",
-    title: "Raindrop",
-    icon: raindrop,
-    width: 38,
-    height: 32,
+    title: "TypeScript",
+    icon: typescript,
+    width: 28,
+    height: 28,
   },
 ];
 
 export const pricing = [
   {
     id: "0",
-    title: "Basic",
-    description: "AI chatbot, personalized recommendations",
-    price: "0",
+    title: "Logo Design",
+    description: "Tell us your idea, our designers will bring it to life by creating the perfect image for your brand",
+    price: "150",
     features: [
       "An AI chatbot that can understand your queries",
       "Personalized recommendations based on your preferences",
@@ -223,79 +230,73 @@ export const pricing = [
   },
   {
     id: "1",
-    title: "Premium",
-    description: "Advanced AI chatbot, priority support, analytics dashboard",
-    price: "9.99",
+    title: "Web Design",
+    description: "Complete Website Design and Deployment, publishing your company to a digital space",
+    price: "500",
+    features: [
+      "An AI chatbot that can understand your queries",
+      "Personalized recommendations based on your preferences",
+      "Ability to explore the app and its features without any cost",
+    ],
+  },
+  {
+    id: "2",
+    title: "App Development",
+    description: "Includes UI/UX design, App functionality development, and deployment on both App Store + Play Store",
+    price: "5000",
     features: [
       "An advanced AI chatbot that can understand complex queries",
       "An analytics dashboard to track your conversations",
       "Priority support to solve issues quickly",
     ],
   },
-  {
-    id: "2",
-    title: "Enterprise",
-    description: "Custom AI chatbot, advanced analytics, dedicated account",
-    price: null,
-    features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
-    ],
-  },
+  
 ];
 
 export const benefits = [
   {
     id: "0",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Web Design",
+    text: "A Pixel Pure-designed website strengthens your online presence, boosts user engagement, and maximizes conversions. We offer customised features, like 3D models and animations, catering to your requirements and bringing your vision to life.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
-    iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
+    iconUrl: pixelpure,
+    imageUrl: pixelpure,
   },
   {
     id: "1",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    title: "App Development",
+    text: "Our app development service creates mobile applications ranging from simple, purpose-specific apps to complex solutions with multiple features and integrations.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
-    iconUrl: benefitIcon2,
-    imageUrl: benefitImage2,
+    iconUrl: pixelpure,
+    imageUrl: pixelpure,
     light: true,
   },
   {
     id: "2",
-    title: "Connect everywhere",
-    text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
+    title: "Digital Consultancy",
+    text: "Our digital consultancy transforms simple ideas into structured business plans, helping clients achieve their targets through strategic guidance and seamless web/app development.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
-    iconUrl: benefitIcon3,
-    imageUrl: benefitImage2,
+    iconUrl: pixelpure,
+    imageUrl: pixelpure,
   },
   {
     id: "3",
-    title: "Fast responding",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Logo and Branding",
+    text: "Our Pixel Pure team features highly qualified graphic designers ready to brand your company. Visit our website to explore our designers' portfolios, view their work, and choose the perfect fit for your branding needs.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
-    iconUrl: benefitIcon4,
-    imageUrl: benefitImage2,
+    iconUrl: pixelpure,
+    imageUrl: pixelpure,
     light: true,
   },
   {
     id: "4",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Hire our Developers",
+    text: "Optimize your website with Pixel Pure’s skilled frontend and backend developers. Existing clients can hire our developers to add new features and meet evolving requirements without the need for a complete redesign.",
     backgroundUrl: "./src/assets/benefits/card-5.svg",
-    iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
+    iconUrl: pixelpure,
+    imageUrl: pixelpure,
   },
-  {
-    id: "5",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
-    backgroundUrl: "./src/assets/benefits/card-6.svg",
-    iconUrl: benefitIcon2,
-    imageUrl: benefitImage2,
-  },
+  
 ];
 
 export const socials = [
