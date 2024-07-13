@@ -1,4 +1,8 @@
 import { curve, heroBackground, robot } from "../assets";
+import futuredesign from "../assets/mandesigning1.png"
+import futuredesign2 from "../assets/mandesigning2.png"
+
+
 import Button from "./Button";
 import Section from "./Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
@@ -6,7 +10,7 @@ import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
 import Generating from "./Generating";
-import Notification from "./Notification";
+import Notification from "./Notification";  
 import CompanyLogos from "./CompanyLogos";
 
 const Hero = () => {
@@ -23,9 +27,9 @@ const Hero = () => {
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
           <h1 className="h1 mb-6">
-            Explore the Possibilities of&nbsp;AI&nbsp;Chatting with {` `}
+            Crafting Perfect Digital Experiences To Elevate Your Brand With {` `}
             <span className="inline-block relative">
-              Brainwave{" "}
+              PixelPure{" "}
               <img
                 src={curve}
                 className="absolute top-full left-0 w-full xl:-mt-2"
@@ -36,8 +40,7 @@ const Hero = () => {
             </span>
           </h1>
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-            Unleash the power of AI within Brainwave. Upgrade your productivity
-            with Brainwave, the open AI chat app.
+          We specialize in transforming your vision into reality with our cutting-edge website design and development services. Whether you're a startup looking to make a mark or an established business aiming for a digital overhaul, Pixel Pure is your go-to partner.
           </p>
           <Button href="/pricing" white>
             Get started
@@ -50,7 +53,7 @@ const Hero = () => {
 
               <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
                 <img
-                  src={robot}
+                  src={futuredesign}
                   className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
                   width={1024}
                   height={490}
