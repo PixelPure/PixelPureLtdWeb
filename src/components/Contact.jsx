@@ -172,7 +172,7 @@ const Contact = () => {
                 <div className="py-12 px-4 xl:px-8">
                   <h4 className="h4 mb-4">Contact us</h4>
                   <p className="body-2 mb-[2rem] text-n-3">
-                    Email: pixelpureinfo@gmail.com
+                    Email: info@pixelpure.co.uk
                   </p>
                   <p className="body-2 mb-[2rem] text-n-3">
                     Phone: +44 7984 093945
