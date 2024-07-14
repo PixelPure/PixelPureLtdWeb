@@ -1,0 +1,23 @@
+.showcase-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* background-color: #000; */
+    padding: 100px 0; /* Adjust as necessary */
+  }
+  
+  .parallax-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .parallax {
+    width: 20%; /* Adjust the size of the images */
+    margin: 0 6%; /* Adjust the spacing between the images */
+    transition: transform 0.2s ease-out;
+    object-fit: cover;
+    border-radius: 20px; /* Optional for rounded corners */
+  }
+  
