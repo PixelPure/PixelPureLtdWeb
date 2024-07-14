@@ -5,6 +5,7 @@ import Heading from "./Heading";
 import { Gradient } from "./design/Services";
 import mandesigning from "../assets/mandesigning2.png";
 import {VideoChatMessage} from "./design/Services"; // Ensure correct import path
+import NextSteps from './NextSteps'; // Import the new NextSteps component
 
 const Contact = () => {
   const form = useRef();
@@ -210,6 +211,7 @@ const Contact = () => {
           </div>
         )}
       </div>
+      {/* <NextSteps /> Add the NextSteps component here */}
     </Section>
   );
 };
