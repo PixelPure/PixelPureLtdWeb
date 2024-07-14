@@ -1,4 +1,4 @@
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import pixelPure from "../assets/pixel_pure_font.png";
 import { navigation } from "../constants";
@@ -9,6 +9,7 @@ import { useState } from "react";
 
 const Header = () => {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
   const [openNavigation, setOpenNavigation] = useState(false);
 
   const toggleNavigation = () => {
@@ -28,6 +29,14 @@ const Header = () => {
     setOpenNavigation(false);
   };
 
+  const scrollToTop = (path) => {
+    if (pathname === path) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate(path);
+    }
+  };
+
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
@@ -35,9 +44,12 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <Link className="block w-[12rem] xl:mr-8" to="/">
+        <div 
+          className="block w-[12rem] xl:mr-8 cursor-pointer" 
+          onClick={() => scrollToTop("/")}
+        >
           <img src={pixelPure} width={190} height={40} alt="Pixel Pure" />
-        </Link>
+        </div>
 
         <nav
           className={`${
@@ -65,9 +77,12 @@ const Header = () => {
 
           <HamburgerMenu />
         </nav>
-        <Link to="/contact" className="hidden lg:flex">
+        <div 
+          className="hidden lg:flex cursor-pointer"
+          onClick={() => scrollToTop("/contact")}
+        >
           <Button>Get In Touch</Button>
-        </Link>
+        </div>
 
         <Button
           className="ml-auto lg:hidden"
