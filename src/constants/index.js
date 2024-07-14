@@ -61,7 +61,7 @@ export const navigation = [
   {
     id: "2",
     title: "Our Designers",
-    url: "#how-to-use",
+    url: "/designers",
   },
   {
     id: "3",

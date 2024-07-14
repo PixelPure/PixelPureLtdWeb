@@ -45,9 +45,14 @@ const App = () => {
             <>
             <Contact />
             <NextSteps/>
-            <Showcase/>
+            {/* <Showcase/> */}
             </>
             } />
+        <Route path="/designers" element={
+            <>
+            <Showcase/>
+            </>
+        } />
       </Routes>
       <Footer />
       <ButtonGradient />
