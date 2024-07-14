@@ -10,6 +10,9 @@ import Pricing from './components/Pricing';
 import Roadmap from './components/Roadmap';
 import Services from './components/Services';
 import Contact from './components/Contact';
+import NextSteps from './components/NextSteps';
+import Showcase from './components/Showcase';
+import ScrollToTop from './components/helper/ScrollToTop';
 
 const App = () => {
   const location = useLocation();
@@ -26,6 +29,7 @@ const App = () => {
   return (
     <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
       <Header />
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={
           <>
@@ -37,7 +41,13 @@ const App = () => {
             {/* <Roadmap /> */}
           </>
         } />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={
+            <>
+            <Contact />
+            <NextSteps/>
+            {/* <Showcase/> */}
+            </>
+            } />
       </Routes>
       <Footer />
       <ButtonGradient />
