@@ -45,7 +45,7 @@ const App = () => {
             <>
             <Contact />
             <NextSteps/>
-            {/* <Showcase/> */}
+            <Showcase/>
             </>
             } />
       </Routes>

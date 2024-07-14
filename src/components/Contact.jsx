@@ -50,7 +50,7 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_8zincml', 'template_x6j9ygi', form.current, 'QsOCvke8aqE6lD2Nk')
+      .sendForm('service_zs1k4zc', 'template_x6j9ygi', form.current, 'QsOCvke8aqE6lD2Nk')
       .then(
         () => {
           console.log('SUCCESS!');
@@ -153,8 +153,8 @@ const Contact = () => {
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between space-y-4 sm:space-y-0">
                     <p className="text-sm">
                       Hate contact forms?{' '}
-                      <a href="mailto:pixelpureinfo@gmail.com" className="underline">
-                        pixelpureinfo@gmail.com
+                      <a href="mailto:info@pixelpure.co.uk" className="underline">
+                        info@pixelpure.co.uk
                       </a>
                     </p>
                     <button
