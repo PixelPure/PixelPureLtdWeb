@@ -42,7 +42,7 @@ const Hero = () => {
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
           We specialize in transforming your vision into reality with our cutting-edge website design and development services. Whether you're a startup looking to make a mark or an established business aiming for a digital overhaul, Pixel Pure is your go-to partner.
           </p>
-          <Button href="/pricing" white>
+          <Button href="/contact" white>
             Get In Touch
           </Button>
         </div>
