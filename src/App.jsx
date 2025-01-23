@@ -6,9 +6,8 @@ import Collaboration from './components/Collaboration';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import PromptoHero from './components/Prompto/PromptoHero';
 import Pricing from './components/Pricing';
-import Roadmap from './components/Roadmap';
-import Services from './components/Services';
 import Contact from './components/Contact';
 import NextSteps from './components/NextSteps';
 import Showcase from './components/Showcase';
@@ -51,6 +50,11 @@ const App = () => {
         <Route path="/designers" element={
             <>
             <Showcase/>
+            </>
+        } />
+        <Route path="/prompto" element={
+            <>
+            <PromptoHero/>
             </>
         } />
       </Routes>

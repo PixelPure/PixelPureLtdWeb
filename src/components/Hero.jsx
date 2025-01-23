@@ -1,6 +1,5 @@
-import { curve, heroBackground, robot } from "../assets";
+import { curve, heroBackground} from "../assets";
 import futuredesign from "../assets/mandesigning1.png"
-import futuredesign2 from "../assets/mandesigning2.png"
 // import heroBackground from "../assets/hero/hero-background.png";
 
 import Button from "./Button";

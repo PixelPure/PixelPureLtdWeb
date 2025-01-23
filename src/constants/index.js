@@ -65,6 +65,11 @@ export const navigation = [
   },
   {
     id: "3",
+    title: "PROMPTO (new!)",
+    url: "/prompto",
+  },
+  {
+    id: "3",
     title: "Get In Touch",
     url: "/contact",
     onlyMobile: true,
