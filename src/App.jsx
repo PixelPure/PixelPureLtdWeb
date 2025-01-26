@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import PromptoHero from './components/Prompto/PromptoHero';
-import PromptoHeroTemp from './components/Prompto/PromptoHeroTemp';
+import PromptoMenu from './components/Prompto/PromptoMenu';
 import Pricing from './components/Pricing';
 import Contact from './components/Contact';
 import NextSteps from './components/NextSteps';
@@ -54,6 +54,11 @@ const App = () => {
             </>
         } />
         <Route path="/prompto" element={
+            <>
+            <PromptoMenu/>
+            </>
+        } />
+        <Route path="/prompto/daily" element={
             <>
             <PromptoHero/>
             </>

@@ -39,7 +39,7 @@ import {
 import portashop from "../assets/portashop.png"
 import liquidity from "../assets/liquidity.png"
 import oneclick from "../assets/oneclickhandling.jpg"
-import pixelpure from "../assets/pixelpureicon.png"
+import pixelpure from "../assets/NewLogoNoBg.png"
 import react from "../assets/technologies/react.png"
 import firebase from "../assets/technologies/firebase.png"
 import javascript from "../assets/technologies/javascript.png"
@@ -69,7 +69,7 @@ export const navigation = [
     url: "/prompto",
   },
   {
-    id: "3",
+    id: "4",
     title: "Get In Touch",
     url: "/contact",
     onlyMobile: true,

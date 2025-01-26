@@ -1,6 +1,6 @@
 import { notification1 } from "../assets";
 import { notificationImages } from "../constants";
-import pixelpure from "../assets/pixelpureicon.png"
+import pixelpure from "../assets/NewLogoNoBg.png"
 
 
 const Notification = ({ className, title }) => {
