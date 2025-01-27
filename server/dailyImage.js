@@ -15,16 +15,17 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const CACHE_FILE = "./dailyImageCache.json";
-const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY?.padEnd(32, "0"); // Use a 32-byte key from .env
+const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY?.padEnd(32, "0"); // Ensure a 32-byte key
 if (!ENCRYPTION_KEY) {
     console.error("ENCRYPTION_KEY is not defined. Check your .env file.");
     process.exit(1);
 }
 
 // Utility: Encrypt a string
-const encrypt = (text) => {
+const encrypt = (data) => {
+    const text = typeof data === "string" ? data : JSON.stringify(data);
     const iv = crypto.randomBytes(16);
-    const cipher = crypto.createCipheriv("aes-256-cbc", Buffer.from(ENCRYPTION_KEY), iv);
+    const cipher = crypto.createCipheriv("aes-256-cbc", Buffer.from(ENCRYPTION_KEY, "utf-8"), iv);
     let encrypted = cipher.update(text, "utf-8", "hex");
     encrypted += cipher.final("hex");
     return { iv: iv.toString("hex"), encryptedData: encrypted };
@@ -34,12 +35,16 @@ const encrypt = (text) => {
 const decrypt = (hash) => {
     const decipher = crypto.createDecipheriv(
         "aes-256-cbc",
-        Buffer.from(ENCRYPTION_KEY),
+        Buffer.from(ENCRYPTION_KEY, "utf-8"),
         Buffer.from(hash.iv, "hex")
     );
     let decrypted = decipher.update(hash.encryptedData, "hex", "utf-8");
     decrypted += decipher.final("utf-8");
-    return decrypted;
+    try {
+        return JSON.parse(decrypted); // Parse JSON if it was an object
+    } catch (err) {
+        return decrypted; // Return as string if it wasn't JSON
+    }
 };
 
 // Load prompts securely from the .env file
@@ -95,11 +100,13 @@ const loadCache = () => {
             console.log("Cache loaded successfully.");
         } catch (err) {
             console.error("Error loading cache:", err);
+            fs.unlinkSync(CACHE_FILE); // Remove corrupted cache file
         }
     } else {
         console.log("No cache file found.");
     }
 };
+
 
 // Function to download an image
 const downloadImage = async (url, filePath) => {
@@ -125,11 +132,11 @@ const generateDailyImage = async () => {
         const randomPrompt = prompts[Math.floor(Math.random() * prompts.length)];
         const encryptedPrompt = encrypt(randomPrompt);
 
-        console.log(`Selected prompt: "${randomPrompt}"`);
+        console.log(`Selected prompt: "${randomPrompt.clean}"`);
 
         console.log("Calling OpenAI DALL·E API...");
         const requestBody = {
-            prompt: randomPrompt,
+            prompt: randomPrompt.enhanced, // Use the enhanced version for generating the image
             n: 1,
             size: "512x512",
         };
@@ -152,7 +159,7 @@ const generateDailyImage = async () => {
             await downloadImage(imageUrl, localImagePath);
 
             global.dailyImage = `http://localhost:${PORT}/static/dailyImage.png`;
-            global.dailyPrompt = randomPrompt;
+            global.dailyPrompt = randomPrompt.clean; // Use the clean version for players
 
             saveCache({ prompt: encryptedPrompt, image: global.dailyImage });
             console.log("Daily image and prompt generated successfully.");
@@ -161,7 +168,6 @@ const generateDailyImage = async () => {
         console.error("Error generating daily image:", error);
     }
 };
-
 // Load cached data on server startup
 console.log("Loading cache on server startup...");
 loadCache();
