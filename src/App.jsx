@@ -7,12 +7,12 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Pricing from './components/Pricing';
-import Roadmap from './components/Roadmap';
-import Services from './components/Services';
 import Contact from './components/Contact';
 import NextSteps from './components/NextSteps';
 import Showcase from './components/Showcase';
 import ScrollToTop from './components/helper/ScrollToTop';
+import Story from './pages/Story';
+import PricingPage from './pages/Pricing';
 
 const App = () => {
   const location = useLocation();
@@ -53,6 +53,8 @@ const App = () => {
             <Showcase/>
             </>
         } />
+        <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/story" element={<Story />} />
       </Routes>
       <Footer />
       <ButtonGradient />

@@ -1,27 +1,16 @@
 import {
-  benefitIcon1,
-  benefitIcon2,
-  benefitIcon3,
-  benefitIcon4,
-  benefitImage2,
   chromecast,
   disc02,
-  discord,
-  discordBlack,
   facebook,
   figma,
   file02,
-  framer,
   homeSmile,
   instagram,
   notification2,
   notification3,
   notification4,
-  notion,
   photoshop,
   plusSquare,
-  protopie,
-  raindrop,
   recording01,
   recording03,
   roadmap1,
@@ -29,11 +18,8 @@ import {
   roadmap3,
   roadmap4,
   searchMd,
-  slack,
   sliders04,
-  telegram,
   twitter,
-  yourlogo,
 } from "../assets";
 
 import portashop from "../assets/portashop.png"
@@ -54,9 +40,14 @@ export const navigation = [
     url: "/#services",
   },
   {
+    id: "story",
+    title: "Story",
+    url: "/story",
+  },
+  {
     id: "1",
     title: "Pricing",
-    url: "/#pricing",
+    url: "/pricing",
   },
   {
     id: "2",
@@ -218,39 +209,84 @@ export const collabApps = [
 
 export const pricing = [
   {
-    id: "0",
-    title: "Logo Design",
-    description: "Tell us your idea, our designers will bring it to life by creating the perfect image for your brand",
-    price: "150",
+    id: "identity",
+    title: "Brand Identity & Systems",
+    description:
+      "Two-week sprint to craft a flexible identity system, launch-ready assets, and a UI kit you can actually use.",
+    price: "1.5K",
     features: [
-      "Custom logos tailored to your brand identity",
-      "Unlimited revisions until you’re satisfied",
-      "High-resolution files suitable for web and print",
+      "Naming, logo suite, and typography pairing",
+      "Modular color + component tokens for web/app",
+      "Social + pitch deck launch asset bundle",
     ],
+    timeline: "2–3 weeks",
+    bestFor: "Founders pre-launch or brands refreshing their look fast",
+    deliverables:
+      "Full logo suite, usage guide, and Figma component library ready for handoff.",
+    support: "Asynchronous Loom reviews + one live critique session",
+    badge: "Identity",
+    ctaLabel: "Start an identity sprint",
   },
   {
-    id: "1",
-    title: "Web Design",
-    description: "Complete Website Design and Deployment, publishing your company to a digital space",
-    price: "500",
+    id: "web",
+    title: "Conversion Websites",
+    description:
+      "High-performing marketing sites built in modern stacks (Next.js / Vite) with animation, CMS, and analytics baked in.",
+    price: "3.5K",
     features: [
-      "Responsive design for seamless experience on all devices",
-      "SEO-optimized structure to boost your search engine rankings",
-      "Integration with social media and analytics tools",
+      "Up to 10 bespoke pages with responsive states",
+      "Integrated CMS + forms, analytics, and automation",
+      "Performance + SEO pass before launch",
     ],
+    timeline: "4–6 weeks",
+    bestFor: "Teams needing a site that can scale with campaigns and content",
+    deliverables:
+      "Source files, component library, and deployment pipeline/hosting handoff.",
+    support: "30-day post-launch support & bug fixes included",
+    badge: "Web",
+    ctaLabel: "Ship my website",
   },
   {
-    id: "2",
-    title: "App Development",
-    description: "Includes UI/UX design, App functionality development, and deployment on both App Store + Play Store",
-    price: "5000",
+    id: "product",
+    title: "Product & App Builds",
+    description:
+      "End-to-end design, engineering, and QA for web/mobile products, admin portals, and bespoke tooling.",
+    price: "8K",
     features: [
-      "Comprehensive UI/UX design for intuitive user experience",
-      "Full functionality development for both iOS and Android",
-      "Post-launch support and maintenance services",
+      "Product strategy + technical architecture",
+      "Full-stack build (React/Next, Node, Flutter, etc.)",
+      "Integrations: Stripe, Supabase, Firebase, custom APIs",
     ],
+    timeline: "6–12 weeks",
+    bestFor: "Startups and teams shipping the first version of a product",
+    deliverables:
+      "Deployed app, documentation, and CI/CD workflows with knowledge transfer.",
+    support: "Optional retainer for roadmap iterations & growth",
+    badge: "Product",
+    ctaLabel: "Build my product",
   },
-  
+  {
+    id: "ai",
+    title: "AI Automation & Ops",
+    description:
+      "Custom AI agents, data pipelines, and workflow automation tailored to your stack and processes.",
+    price: "Custom",
+    showCurrency: false,
+    showPlus: false,
+    features: [
+      "Process mapping + opportunity workshop",
+      "LLM + vector store architecture and prompt design",
+      "Agentic workflows that plug into your CRM, ops, or support stack",
+    ],
+    timeline: "3–6 weeks",
+    bestFor: "Ops, CX, and product teams wanting measurable efficiency gains",
+    deliverables:
+      "Automation blueprints, secured deployments, and in-team enablement.",
+    support: "Training + monitoring dashboard with 60-day optimisation cycle",
+    badge: "AI",
+    ctaLabel: "Scope my automation",
+    highlight: true,
+  },
 ];
 
 export const benefits = [

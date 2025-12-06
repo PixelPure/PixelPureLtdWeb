@@ -1,54 +1,60 @@
-import React from 'react';
-import Section from './Section';
-import Heading from './Heading';
+import React from "react";
+import Section from "./Section";
+
+const steps = [
+  {
+    id: 1,
+    title: "Initial consultation",
+    text: "We learn about your product, target users, and success metrics so we can recommend an approach that actually supports the wider business.",
+  },
+  {
+    id: 2,
+    title: "Proposal & timeline",
+    text: "You receive a written plan covering deliverables, phases, budget, and availability. We iterate quickly until it feels right.",
+  },
+  {
+    id: 3,
+    title: "Align & sign",
+    text: "Once the scope is approved we lock in start dates, align on collaboration tools, and make sure key stakeholders are looped in.",
+  },
+  {
+    id: 4,
+    title: "Project kickoff",
+    text: "Design, engineering, and QA spin up in parallel with weekly check-ins, async Loom updates, and a clear release schedule.",
+  },
+];
 
 const NextSteps = () => {
-  const steps = [
-    {
-      id: 1,
-      title: 'Initial Consultation',
-      text: "After receiving your service request, we’ll schedule a meeting to discuss your vision and project requirements in detail.",
-    },
-    {
-      id: 2,
-      title: 'Proposal Presentation',
-      text: "We will develop a tailored proposal outlining the project scope, timeline, and cost, and present it for your review and approval.",
-    },
-    {
-      id: 3,
-      title: 'Contract Agreement',
-      text: "Once you approve the proposal, we’ll provide a detailed contract. This ensures clarity and sets expectations for both parties.",
-    },
-    {
-      id: 4,
-      title: 'Project Kickoff',
-      text: "With the contract signed, we’ll kick off the project, keeping you informed with regular updates and maintaining the highest level of professionalism throughout.",
-    },
-  ];
-
   return (
-    <Section id="next-steps">
-      <div className="container mx-auto px-5 sm:px-0 relative flex flex-col lg:flex-row items-center">
-        <div className="lg:w-1/2 lg:pr-16">
-        <Heading 
-            title="Next Steps."
-            tag="What you should expect after approaching us"
-          />
+    <Section id="next-steps" className="pt-0">
+      <div className="container space-y-12">
+        <div className="max-w-3xl space-y-4">
+          <p className="tagline text-color-2">Next steps</p>
+          <h2 className="h2">What happens after you reach out</h2>
+          <p className="body-2 text-n-3">
+            No black boxes. You will always know what we&apos;re building, why,
+            and how it ladders back to the results you care about.
+          </p>
         </div>
-        <div className="lg:w-1/2">
-          <div className="relative flex flex-col space-y-10">
-            {steps.map((step, index) => (
-              <div key={step.id} className="relative flex items-start pl-16">
-                <div className="absolute left-0 top-0 flex items-center justify-center w-10 h-10 bg-gray-900 border-2 border-gray-700 text-white font-bold rounded-full">
+        <div className="grid gap-6 md:grid-cols-2">
+          {steps.map((step, index) => (
+            <article
+              key={step.id}
+              className="relative overflow-hidden rounded-[1.75rem] border border-n-6/60 bg-n-8/80 p-6 shadow-[0_25px_70px_rgba(8,7,17,0.45)]"
+            >
+              <div className="flex items-center gap-3 text-xs font-code uppercase tracking-[0.3em] text-n-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full border border-n-6 text-base font-semibold text-n-1">
                   {index + 1}
-                </div>
-                <div className=" max-w-md">
-                  <h3 className="text-xl font-semibold">{step.title}</h3>
-                  <p className="text-gray-400">{step.text}</p>
-                </div>
+                </span>
+                Step {index + 1}
               </div>
-            ))}
-          </div>
+              <h3 className="mt-4 text-xl font-semibold text-n-1">
+                {step.title}
+              </h3>
+              <p className="mt-3 text-n-3">{step.text}</p>
+              <div className="pointer-events-none absolute -right-10 -top-12 h-32 w-32 rounded-full bg-color-1/15 blur-3xl" />
+            </article>
+          ))}
         </div>
       </div>
     </Section>
