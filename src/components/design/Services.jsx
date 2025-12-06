@@ -1,6 +1,6 @@
-import {gradient, play } from "../../assets";
+import { gradient, play } from "../../assets";
 import ChatBubbleWing from "../../assets/svg/ChatBubbleWing";
-import pixelpure from "../../assets/pixelpureicon.png"
+import { BRAND_LOGO_PATH } from "../../constants/brand";
 
 export const Gradient = () => {
   return (
@@ -31,7 +31,7 @@ export const VideoChatMessage = () => {
       Your Message has been sent!
       <div className="absolute left-5 -bottom-[1.125rem] flex items-center justify-center w-[2.25rem] h-[2.25rem] bg-color-1 rounded-[0.75rem]">
         <img
-          src={pixelpure}
+          src={BRAND_LOGO_PATH}
           width={26}
           height={26}
           alt="Brainwave"

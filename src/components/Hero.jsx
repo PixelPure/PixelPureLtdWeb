@@ -1,6 +1,5 @@
-import { curve, heroBackground, robot } from "../assets";
+import { curve, heroBackground } from "../assets";
 import futuredesign from "../assets/mandesigning1.png"
-import futuredesign2 from "../assets/mandesigning2.png"
 // import heroBackground from "../assets/hero/hero-background.png";
 
 import Button from "./Button";
@@ -40,7 +39,7 @@ const Hero = () => {
             </span>
           </h1>
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-          We specialize in transforming your vision into reality with our cutting-edge website design and development services. Whether you're a startup looking to make a mark or an established business aiming for a digital overhaul, Pixel Pure is your go-to partner.
+          We specialize in transforming your vision into reality with our cutting-edge website design and development services. Whether you&apos;re a startup looking to make a mark or an established business aiming for a digital overhaul, Pixel Pure is your go-to partner.
           </p>
           <Button href="/contact" white>
             Get In Touch

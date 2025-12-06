@@ -1,9 +1,9 @@
-import { brainwaveSymbol, check } from "../assets";
+import { check } from "../assets";
 import { collabApps, collabContent, collabText4 } from "../constants";
+import { BRAND_LOGO_PATH } from "../constants/brand";
 import Button from "./Button";
 import Section from "./Section";
 import { LeftCurve, RightCurve } from "./design/Collaboration";
-import pixelpure from "../assets/pixelpureicon.png"
 
 const Collaboration = () => {
   return (
@@ -39,7 +39,7 @@ const Collaboration = () => {
               <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
                 <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
                   <img
-                    src={pixelpure}
+                    src={BRAND_LOGO_PATH}
                     width={48}
                     height={48}
                     alt="brainwave"

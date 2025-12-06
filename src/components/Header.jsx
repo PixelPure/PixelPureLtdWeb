@@ -1,11 +1,11 @@
 import { useLocation, Link, useNavigate } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-import pixelPure from "../assets/pixel_pure_font.png";
+import { useState } from "react";
 import { navigation } from "../constants";
+import { BRAND_NAV_LOGO_PATH } from "../constants/brand";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
-import { useState } from "react";
 
 const Header = () => {
   const { pathname } = useLocation();
@@ -45,10 +45,16 @@ const Header = () => {
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <div 
-          className="block w-[12rem] xl:mr-8 cursor-pointer" 
+          className="block w-[8rem] xl:mr-8 cursor-pointer" 
           onClick={() => scrollToTop("/")}
         >
-          <img src={pixelPure} width={190} height={40} alt="Pixel Pure" />
+          <img
+            src={BRAND_NAV_LOGO_PATH}
+            width={96}
+            height={96}
+            alt="Pixel Pure"
+            className="h-10 w-auto"
+          />
         </div>
 
         <nav

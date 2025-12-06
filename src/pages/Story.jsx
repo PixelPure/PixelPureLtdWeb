@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import Section from "../components/Section";
 
-const metaDescription =
-  "Discover the story behind Pixel Pure: how Vik went from late-night side projects and enterprise cybersecurity to building a product-focused studio for ambitious brands.";
-
 const GraduationIcon = () => (
   <svg
     className="h-5 w-5"
@@ -144,30 +141,6 @@ const Story = () => {
   );
   const [columnHeight, setColumnHeight] = useState(0);
   const [reduceMotion, setReduceMotion] = useState(false);
-
-  useEffect(() => {
-    if (typeof document === "undefined") return undefined;
-    const previousTitle = document.title;
-    document.title = "Our Story – Pixel Pure";
-
-    let metaTag = document.querySelector('meta[name="description"]');
-    const previousDescription = metaTag?.getAttribute("content") || "";
-
-    if (!metaTag) {
-      metaTag = document.createElement("meta");
-      metaTag.setAttribute("name", "description");
-      document.head.appendChild(metaTag);
-    }
-
-    metaTag.setAttribute("content", metaDescription);
-
-    return () => {
-      document.title = previousTitle;
-      if (metaTag) {
-        metaTag.setAttribute("content", previousDescription);
-      }
-    };
-  }, []);
 
   useEffect(() => {
     if (typeof window === "undefined" || typeof window.matchMedia !== "function") {

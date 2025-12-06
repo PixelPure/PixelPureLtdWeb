@@ -21,17 +21,19 @@ import {
   sliders04,
   twitter,
 } from "../assets";
+import { BRAND_LOGO_PATH } from "./brand";
 
 import portashop from "../assets/portashop.png"
 import liquidity from "../assets/liquidity.png"
 import oneclick from "../assets/oneclickhandling.jpg"
-import pixelpure from "../assets/pixelpureicon.png"
 import react from "../assets/technologies/react.png"
 import firebase from "../assets/technologies/firebase.png"
 import javascript from "../assets/technologies/javascript.png"
 import threejs from "../assets/technologies/threejs.png"
 import typescript from "../assets/technologies/typescript.png"
 import nodejs from "../assets/technologies/nodejs.png"
+
+const brandLogo = BRAND_LOGO_PATH;
 
 export const navigation = [
   {
@@ -295,16 +297,16 @@ export const benefits = [
     title: "Web Design",
     text: "A Pixel Pure-designed website strengthens your online presence, boosts user engagement, and maximizes conversions. We offer customised features, like 3D models and animations, catering to your requirements and bringing your vision to life.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
-    iconUrl: pixelpure,
-    imageUrl: pixelpure,
+    iconUrl: brandLogo,
+    imageUrl: brandLogo,
   },
   {
     id: "1",
     title: "App Development",
     text: "Our app development service creates mobile applications ranging from simple, purpose-specific apps to complex solutions with multiple features and integrations.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
-    iconUrl: pixelpure,
-    imageUrl: pixelpure,
+    iconUrl: brandLogo,
+    imageUrl: brandLogo,
     light: true,
   },
   {
@@ -312,16 +314,16 @@ export const benefits = [
     title: "Digital Consultancy",
     text: "Our digital consultancy transforms simple ideas into structured business plans, helping clients achieve their targets through strategic guidance and seamless web/app development.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
-    iconUrl: pixelpure,
-    imageUrl: pixelpure,
+    iconUrl: brandLogo,
+    imageUrl: brandLogo,
   },
   {
     id: "3",
     title: "Logo and Branding",
     text: "Our Pixel Pure team features highly qualified graphic designers ready to brand your company. Visit our website to explore our designers' portfolios, view their work, and choose the perfect fit for your branding needs.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
-    iconUrl: pixelpure,
-    imageUrl: pixelpure,
+    iconUrl: brandLogo,
+    imageUrl: brandLogo,
     light: true,
   },
   {
@@ -329,8 +331,8 @@ export const benefits = [
     title: "Hire our Developers",
     text: "Optimize your website with Pixel Pure’s skilled frontend and backend developers. Existing clients can hire our developers to add new features and meet evolving requirements without the need for a complete redesign.",
     backgroundUrl: "./src/assets/benefits/card-5.svg",
-    iconUrl: pixelpure,
-    imageUrl: pixelpure,
+    iconUrl: brandLogo,
+    imageUrl: brandLogo,
   },
   
 ];

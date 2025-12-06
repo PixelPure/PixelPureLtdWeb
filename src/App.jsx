@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 import NextSteps from './components/NextSteps';
 import Showcase from './components/Showcase';
 import ScrollToTop from './components/helper/ScrollToTop';
+import Seo from './components/Seo';
 import Story from './pages/Story';
 import PricingPage from './pages/Pricing';
 
@@ -25,6 +26,12 @@ const App = () => {
       }
     }
   }, [location]);
+  
+  React.useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.dispatchEvent(new Event("prerender-ready"));
+    }
+  }, []);
 
   return (
     <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
@@ -33,6 +40,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={
           <>
+            <Seo page="home" />
             <Hero />
             <Benefits />
             <Collaboration />
@@ -43,6 +51,7 @@ const App = () => {
         } />
         <Route path="/contact" element={
             <>
+            <Seo page="contact" />
             <Contact />
             <NextSteps/>
             {/* <Showcase/> */}
@@ -50,11 +59,22 @@ const App = () => {
             } />
         <Route path="/designers" element={
             <>
+            <Seo page="designers" />
             <Showcase/>
             </>
         } />
-        <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/story" element={<Story />} />
+        <Route path="/pricing" element={
+          <>
+            <Seo page="pricing" />
+            <PricingPage />
+          </>
+        } />
+        <Route path="/story" element={
+          <>
+            <Seo page="story" />
+            <Story />
+          </>
+        } />
       </Routes>
       <Footer />
       <ButtonGradient />

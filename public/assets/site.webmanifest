@@ -1,0 +1,22 @@
+{
+  "name": "Pixel Pure",
+  "short_name": "Pixel Pure",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#050505",
+  "background_color": "#050505",
+  "icons": [
+    {
+      "src": "/assets/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
